@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+    var seriesTitle = "The Amazing Spidrman";
+    var Seriesnumber = 700;
+    var Description = "I am a Software Engineer, I have done my degree from COMSATS, I am a very proficient web developer and can develop responsive websites for my company according to their needs.My top skills are in HTML, CSS, JavaScript, JQuery, Bootsrap, WordPress and PHP.";
+    var artist = new String[]
+    {
+        "Aman : .net developer",
+        "Nasir : Another .net developer",
+        "Aizaz : Angular"
+    };
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>@seriesTitle</h1>
+    </div>
+    <h2>series #@Seriesnumber</h2>
+    <h3>Description:</h3>
+    <p>@Description</p>
+    @if (artist.Length > 0)
+    {
+        <h4>Artists:</h4>
+        <ul>
+            @foreach (var art in artist)
+            {
+                <li>
+                    <text> @art </text>
+                </li>
+            }
+        </ul>
+    }
+
+</body>
+</html>
